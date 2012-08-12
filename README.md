@@ -30,6 +30,13 @@ You can use reduce to show counts and sums by key:
     65607553    1   406.177782
     77C63B96    3   1532.075398
 
+## installation
+
+    git clone git://github.com/thinkjson/reduce.git
+    cd reduce
+    make
+    sudo make install
+
 ## a more useful example
 
 Say you have an Apache log file:
