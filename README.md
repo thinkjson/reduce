@@ -52,7 +52,7 @@ C implementation as compared to Python reference implementation:
     $ junk | head -c 536870912 | sort > test
 
     $ time python reduce.py <test
-    12295AA 1594057 797027391.917313
+    12295AA     1594057 797027391.917313
     176DB578    1591997 796713786.895693
     1B6AC571    1593859 796683991.847406
     2832BCBB    1591308 795813102.401661
@@ -75,7 +75,7 @@ C implementation as compared to Python reference implementation:
     sys     0m0.250s
 
     $ time reduce <test
-    12295AA 1594057 797027391.917313
+    12295AA     1594057 797027391.917313
     176DB578    1591997 796713786.895693
     1B6AC571    1593859 796683991.847406
     2832BCBB    1591308 795813102.401661
