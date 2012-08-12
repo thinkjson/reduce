@@ -1,12 +1,12 @@
 CFLAGS = -I. -I/usr/local/include -O3 -g
 
-all: sum
+all: reduce
 
-sob: sum.c 
-	$(CC) $(CFLAGS) -o sum sum.c $(LIBS)
+sob: reduce.c 
+	$(CC) $(CFLAGS) -o reduce reduce.c $(LIBS)
 
 install:
-	/usr/bin/install sum /usr/local/bin/
+	/usr/bin/install reduce /usr/local/bin/
 
 clean:
-	rm -f sum
+	rm -f reduce

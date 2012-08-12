@@ -20,13 +20,6 @@ int main() {
         // Check key against previous key
         key[i] = '\0';
 
-        // Advance counters
-        count++;
-        strncpy(value, buf + strlen(key) + 1, strlen(buf) - strlen(key) - 2);
-        value[strlen(buf) - strlen(key) - 2] = '\0';
-        el = atof(value);
-        sum += el;
-
         // Keys do not match, print summary and reset counters
         if (strncmp(key, last_key, strlen(key))) {
           // If this is not the first row, print the key and aggregates
@@ -40,12 +33,18 @@ int main() {
           strncpy(last_key, key, strlen(key));
           last_key[strlen(key)] = '\0';
         }
+
+        // Advance counters
+        count++;
+        strncpy(value, buf + strlen(key) + 1, strlen(buf) - strlen(key) - 2);
+        value[strlen(buf) - strlen(key) - 2] = '\0';
+        el = atof(value);
+        sum += el;
       } else {
         key[i] = buf[i];
       }
     }
   }
 
-  count++;
   printf("%s\t%d\t%f\n", key, count, sum);
 }
